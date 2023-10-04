@@ -1,0 +1,108 @@
+/* UNIVERSAL STYLES */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(218, 23%, 16%);
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Identified Element Styles */
+
+#outer-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    background-color: hsl(217, 19%, 24%);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    border: 0;
+    border-radius: 10px;
+    
+}
+
+#boxhead{
+    text-align: center;
+    margin-top: 20px;
+    color: hsl(150, 100%, 66%);
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+#boxbody{
+    text-align: center;
+    margin-top: 10px;
+    margin-inline: 20px;
+    color: hsl(193, 38%, 86%);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#patterndivide{
+    margin-top: 20px;
+    margin-inline: 20px;
+}
+
+#dicediv{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    
+}
+
+#dice{
+    background-color: hsl(150, 100%, 66%);
+    padding-top: 16px;
+    padding-bottom: 14px;
+    padding-inline: 16px;
+    border-radius: 50%;
+    border:0px;
+
+    transition-duration: 0.2s;
+}
+
+#dice:active{
+    -webkit-box-shadow: 0px 0px 16px 6px rgba(82,255,168,0.5);
+    -moz-box-shadow: 0px 0px 16px 6px rgba(82,255,168,0.5);
+    box-shadow: 0px 0px 16px 6px rgba(82,255,168,0.5);
+}
+
+/* Media Query Styles */
+
+@media (max-width: 376px){
+    #outer-box{
+       width: 95%;
+    }
+
+    #patterndivide{
+        position: relative;
+        background-image: url('./images/pattern-divider-mobile.svg');
+        height: 16px;
+        background-position: center;
+    }
+
+    #dice{
+        padding-top: 18px;
+        padding-bottom: 16px;
+        padding-inline: 18px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 1920px){
+    #outer-box{
+        width: 33.3%;
+    }
+    #patterndivide{
+        position: relative;
+        background-image: url('./images/pattern-divider-desktop.svg');
+        height: 16px;
+        background-position: center;
+    }
+}
